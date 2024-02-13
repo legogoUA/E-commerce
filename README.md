@@ -6,6 +6,6 @@ E-commerce portfolio project with React JS__
 Completed: 
 - ShopPage
 
-Time to continue 1:22:55
+Time to continue 43:41 
 
 For watching result this project -[LinkToVisit](https://legogoua.github.io/E-commerce/);
