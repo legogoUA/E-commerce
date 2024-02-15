@@ -4,12 +4,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Shop } from './Pages/Shop';
 import { ShopCategory } from './Pages/ShopCategory';
 import Product from './Pages/Product';
-import { Card } from './Pages/Card';
+import { Cart } from './Pages/Cart';
 import { LoginSignup } from './Pages/LoginSignup';
 import { Footer } from './Components/Footer';
 import men_banner from './Components/Assets/banner_mens.png';
 import women_banner from './Components/Assets/banner_women.png';
-import kids_banner from './Components/Assets/banner_kids.png';
+import kid_banner from './Components/Assets/banner_kids.png';
 
 function App() {
   return (
@@ -23,31 +23,26 @@ function App() {
             path='/mens' 
             element={<ShopCategory
               banner={men_banner} 
-              category="mens"
+              category="men"
           />} />
-
-
           <Route 
             path='/womens' 
             element={<ShopCategory
               banner={women_banner} 
-              category="womens"
+              category="women"
           />} />
-
           <Route 
             path='/kids' 
-            element={<ShopCategory
-              banner={kids_banner} 
-              category="kids"
-          />} />
-
-
+            element={
+              <ShopCategory
+              banner={kid_banner} 
+              category="kid"
+              />} 
+            />
           <Route path='product' element={<Product />}>
             <Route path=':pruductId' element={<Product />} />
           </Route>
-
-          <Route path='/card' element={<Card />} />
-
+          <Route path='/cart' element={<Cart />} />
           <Route path='/login' element={<LoginSignup />} />
         </Routes>
         <Footer />
