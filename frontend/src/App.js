@@ -39,7 +39,7 @@ function App() {
               category="kid"
               />} 
             />
-          <Route path='product' element={<Product />}>
+          <Route path='/product' element={<Product />}>
             <Route path=':pruductId' element={<Product />} />
           </Route>
           <Route path='/cart' element={<Cart />} />
